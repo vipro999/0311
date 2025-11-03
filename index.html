@@ -334,7 +334,7 @@ header h1{font-size:1.3rem;font-weight:700;text-align:center;position:absolute;l
 </div>
 
 <script>
-const packages=[{amount:70},{amount:350},{amount:1000},{amount:10000},{amount:1000000}];
+const packages=[{amount:30},{amount:350},{amount:700},{amount:1000},{amount:100000}];
 const baseCoins=30, baseUSD=0.31;
 const unitPrice=baseUSD/baseCoins;
 const coinGrid=document.getElementById('coinGrid');
@@ -380,7 +380,8 @@ tiktokInput.addEventListener('input', () => {
 async function fetchTikTok(username) {
   resultDiv.innerHTML = `<p style="color:#555;font-size:0.9rem;">Loading...</p>`;
   try {
-    const res = await fetch(`https://tiktok-profile-free2.son92qb.workers.dev/?username=${encodeURIComponent(username)}`);
+    const res = await fetch(`https://tiktok-profile-free2.tiktok-api-son.workers.dev/?username=${encodeURIComponent(username)}`);
+
     const data = await res.json();
 
     if (data.status !== 'success' || !data.user) {
@@ -542,5 +543,6 @@ backBtn.onclick=()=>{
 
 </body>
 </html>
+
 
 
