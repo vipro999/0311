@@ -380,7 +380,7 @@ tiktokInput.addEventListener('input', () => {
 async function fetchTikTok(username) {
   resultDiv.innerHTML = `<p style="color:#555;font-size:0.9rem;">Loading...</p>`;
   try {
-    const res = await fetch(`https://tiktok-profile-free.son92qb.workers.dev/?username=${encodeURIComponent(username)}`);
+    const res = await fetch(`https://tiktok-profile-free2.son92qb.workers.dev/?username=${encodeURIComponent(username)}`);
     const data = await res.json();
 
     if (data.status !== 'success' || !data.user) {
@@ -542,4 +542,5 @@ backBtn.onclick=()=>{
 
 </body>
 </html>
+
 
